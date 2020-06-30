@@ -11,7 +11,7 @@ Project was made by using dataset [Heart Disease UCI](https://archive.ics.uci.ed
 <i>Score table of LR model using all features.</i>
 
 
-<img src='https://raw.githubusercontent.com/aleksaKis/Classification-Heart-disease/master/images/roc_curve.png' alt='Confusion Matrix'>
+<img src='https://raw.githubusercontent.com/aleksaKis/Classification-Heart-disease/master/images/confusion_matrix.png' alt='Confusion Matrix'>
 <i>Confusion Matrix table witch shows how many data points were predicted wrong.</i>
 
 
