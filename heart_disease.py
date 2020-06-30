@@ -17,7 +17,7 @@ features = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
 X = df[features].values
 X1 = df[['age', 'cp', 'ca', 'thal']].values
 y = df['target']
-kf = KFold(n_splits=20, shuffle=True)
+kf = KFold(n_splits=7, shuffle=True)
 
 
 # Get more valid scores of model after cross validation
@@ -78,7 +78,7 @@ param_grid = {
     'max_leaf_nodes': [5, 15, 30, 50]
 }
 
-gs = GridSearchCV(dt, param_grid, scoring='f1', cv=20)
+gs = GridSearchCV(dt, param_grid, scoring='f1', cv=7)
 gs.fit(X, y)
 # print('Best param_grid: ',gs.best_params_,'\nBest score: ',gs.best_score_)
 
@@ -98,3 +98,5 @@ dot = export_graphviz(dt_final, feature_names=['age', 'CP', 'CA', 'thal'])
 # Scores for export
 def scores_for_table():
     return score_model(X, y, kf, model_lg), score_model(X1, y, kf, dt_final), confusion_matrix(y, y_lg_pred)
+
+display()
