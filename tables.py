@@ -49,9 +49,9 @@ dt_scores_fig = go.Figure(data=[go.Table(header=dt_scores_header, cells=dt_score
 dt_scores_fig.show()
 
 # Confusion Matrix
-cm_header = dict(values=["<b>Confusion Matrix</b>", "<b>Actual Positive (1)</b>", "<b>Actual Negative (0)</b>"],
+cm_header = dict(values=["<b>Confusion Matrix</b>", "<b>Actual Negative (0)</b>", "<b>Actual Positive (1)</b>"],
                  align='center', font=dict(color='black', size=14))
-cm_cells = dict(values=[["<b>Predicted Positive (1)</b>", "<b>Predicted Negative (0)</b>"], scores[2][0], scores[2][1]],
+cm_cells = dict(values=[["<b>Predicted Negative (0)</b>", "<b>Predicted Positive (1)</b>"], scores[2][0], scores[2][1]],
                 align='center', font=dict(color='black', size=14))
 
 cm_fig = go.Figure(data=[go.Table(header=cm_header, cells=cm_cells)])
